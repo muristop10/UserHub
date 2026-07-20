@@ -4,6 +4,7 @@ import { IoIosNotifications } from "react-icons/io";
 import { ProfileIcon } from '../ProfileIcon';
 import InputUserSearch from '../InputUserSearch';
 import styled from "styled-components";
+import Logo from '../Logo';
 
 export const StyledHeader = styled.header`
   width: 100%;
@@ -33,7 +34,7 @@ export const StyledHeader = styled.header`
     flex-shrink: 0;
 
     img {
-      height: 46px;
+      height: 54px;
       display: block;
       cursor: pointer;
     }
@@ -56,7 +57,7 @@ export const StyledHeader = styled.header`
 
     color: #cbd5e1;
 
-    font-size: 0.95rem;
+    font-size: 0.7rem;
     font-weight: 500;
 
     transition: 0.3s;
@@ -79,20 +80,26 @@ export const StyledHeader = styled.header`
     flex-shrink: 0;
   }
 
+  .actions svg {
+    font-size: 1.75rem;
+  }
+
   a {
     display: flex;
     align-items: center;
     justify-content: center;
 
     color: white;
-    font-size: 1.5rem;
 
     transition: 0.3s;
 
     &:hover {
       color: #6366f1;
-      transform: scale(1.05);
     }
+  }
+
+  .options li a {
+    font-size: 1rem;
   }
 
   /* TABLET */
@@ -157,15 +164,15 @@ export const StyledHeader = styled.header`
     }
 
     li {
-      font-size: 0.85rem;
+      font-size: 0.7rem;
     }
 
     figure img {
-      height: 38px;
+      height: 44px;
     }
 
     a {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
     }
   }
 `;
@@ -173,30 +180,34 @@ export const StyledHeader = styled.header`
 
 const Header = () => {
   return (
-  <StyledHeader>
-    <figure>
-      <img src='src/assets/logo.svg' alt='Logo'/>
-    </figure>
-    
-    <nav>
-      <ul>
-        <li><Link to='/login'>Login</Link></li>
-        <li><Link to='/users'>Users</Link></li>
-      </ul>
-    </nav>
+    <StyledHeader>
+      <figure>
+        <Link to='/'>
+          <Logo src='src/assets/logo.svg' alt='Logo' />
+        </Link>
+      </figure>
 
-    <div className="search">
-      <InputUserSearch placeholder='Busque por usuários...'/>
-    </div>
+      <nav>
+        <ul className='options'>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/login'>Login</Link></li>
+          <li><Link to='/signup'>Cadastro</Link></li>
+          <li><Link to='/users'>Users</Link></li>
+        </ul>
+      </nav>
 
-    <div className="actions">
-      <Link to="#">
-        <IoIosNotifications />
-      </Link>
+      <div className="search">
+        <InputUserSearch placeholder='Busque por usuários...' />
+      </div>
 
-      <ProfileIcon profileIcon='#'/>
-    </div>
-  </StyledHeader>
+      <div className="actions">
+        <Link to="#">
+          <IoIosNotifications />
+        </Link>
+
+        <ProfileIcon profileIcon='#' />
+      </div>
+    </StyledHeader>
   )
 }
 

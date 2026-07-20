@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styled from 'styled-components'
 
 const StyledLogo = styled.img`
@@ -18,14 +18,16 @@ const StyledLogo = styled.img`
 `
 
 interface LogoProps {
-    src: string
+    src: string,
+    alt?: string
 }
 
 const Logo = ({
-    src
+    src,
+    alt
 } : LogoProps) => {
     return (
-        <StyledLogo src={src}/>
+        <StyledLogo src={src} alt={alt}/>
     )
 }
 
