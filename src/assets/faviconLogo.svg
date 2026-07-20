@@ -1,0 +1,55 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+>
+    <!-- Container -->
+
+    <rect
+        x="16"
+        y="16"
+        width="224"
+        height="224"
+        rx="56"
+        fill="#C4B5FD"
+    />
+
+    <!-- U -->
+
+    <path
+        d="
+        M70 80
+        V135
+        C70 170 88 188 118 188
+        C148 188 166 170 166 135
+        V80
+        "
+        fill="none"
+        stroke="#FFFFFF"
+        stroke-width="20"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+
+    <!-- H -->
+
+    <path
+        d="M144 80V176"
+        stroke="#FFFFFF"
+        stroke-width="20"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="M186 80V176"
+        stroke="#FFFFFF"
+        stroke-width="20"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="M144 128H186"
+        stroke="#FFFFFF"
+        stroke-width="20"
+        stroke-linecap="round"
+    />
+</svg>

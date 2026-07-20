@@ -1,0 +1,59 @@
+<svg
+  width="420"
+  height="120"
+  viewBox="0 0 420 120"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Ícone -->
+
+  <rect
+    x="10"
+    y="10"
+    width="90"
+    height="90"
+    rx="24"
+    fill="none"
+    stroke="#C4B5FD"
+    stroke-width="4"
+  />
+
+  <!-- U -->
+
+  <path
+    d="M35 35V62C35 77 46 87 60 87C74 87 85 77 85 62V35"
+    stroke="#FFFFFF"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Nó digital -->
+
+  <circle cx="92" cy="18" r="6" fill="#C4B5FD"/>
+  <circle cx="108" cy="34" r="4.5" fill="#C4B5FD"/>
+
+  <!-- Nome -->
+
+  <text
+    x="125"
+    y="68"
+    font-family="Inter, Arial, sans-serif"
+    font-size="44"
+    font-weight="700"
+    fill="#FFFFFF"
+  >
+    User
+  </text>
+
+  <text
+    x="225"
+    y="68"
+    font-family="Inter, Arial, sans-serif"
+    font-size="44"
+    font-weight="700"
+    fill="#C4B5FD"
+  >
+    Hub
+  </text>
+</svg>
