@@ -5,6 +5,7 @@ import Home from "../pages/home";
 import Users from "../pages/users";
 import NotFound from "../components/NotFound";
 import SignUp from "../pages/signup";
+import UserDetails from "../pages/userDetails";
 
 export const router = createBrowserRouter([
   {
@@ -20,12 +21,16 @@ export const router = createBrowserRouter([
         element: <Login />
       },
       {
-        path: '/users',
-        element: <Users />
-      },
-      {
         path: '/signup',
         element: <SignUp />
+      },
+      {
+        path: '/users',
+        element: <Users />,
+      },
+      {
+        path: '/users/:id',
+        element: <UserDetails />
       },
       {
         path: '*',

@@ -93,6 +93,30 @@ export const Input = styled.input`
   &::placeholder {
     color: #94a3b8;
   }
+
+  &[type="file"] {
+    padding: 0.4rem 0.75rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &::file-selector-button {
+    margin-right: 1rem;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary);
+    color: white;
+    font-weight: 500;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  &::file-selector-button:hover {
+    background: var(--primary-dark);
+  }
 `;
 
 export const SubmitButton = styled.button`

@@ -1,27 +1,37 @@
 import styled from "styled-components";
 
-const MainTitleStyled = styled.h1`
+export const MainTitleStyled = styled.h1`
   font-family: "Poppins", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin: 16px;
-
-  color: var(--text-primary);
-
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
 
   display: flex;
   align-items: center;
-  gap: .75rem;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 900px;
 
-  &::before {
-    content: "";
-    width: 8px;
-    height: 8px;
+  color: var(--text-primary);
+  background: linear-gradient(
+    135deg, 
+    var(--text-primary) 30%, 
+    var(--primary) 100%
+  );
 
-    border-radius: 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-    background: var(--primary);
+  @media (max-width: 768px) {
+    gap: 0.75rem;
+    
+    &::before {
+      width: 10px;
+      height: 10px;
+    }
   }
 `;
 

@@ -1,55 +1,30 @@
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 256 256"
->
-    <!-- Container -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A5B4FC"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
 
-    <rect
-        x="16"
-        y="16"
-        width="224"
-        height="224"
-        rx="56"
-        fill="#C4B5FD"
-    />
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#6366F1" flood-opacity="0.4"/>
+    </filter>
+  </defs>
 
-    <!-- U -->
+  <g filter="url(#glow)">
+    <rect x="6" y="6" width="52" height="52" rx="16" fill="none" stroke="url(#primary-grad)" stroke-width="4.5"/>
+    
+    <path d="M 22 20 V 34 C 22 41 27 45 32 45 C 37 45 42 41 42 34 V 20" 
+          fill="none" 
+          stroke="url(#primary-grad)" 
+          stroke-width="5" 
+          stroke-linecap="round"/>
 
-    <path
-        d="
-        M70 80
-        V135
-        C70 170 88 188 118 188
-        C148 188 166 170 166 135
-        V80
-        "
-        fill="none"
-        stroke="#FFFFFF"
-        stroke-width="20"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-    />
-
-    <!-- H -->
-
-    <path
-        d="M144 80V176"
-        stroke="#FFFFFF"
-        stroke-width="20"
-        stroke-linecap="round"
-    />
-
-    <path
-        d="M186 80V176"
-        stroke="#FFFFFF"
-        stroke-width="20"
-        stroke-linecap="round"
-    />
-
-    <path
-        d="M144 128H186"
-        stroke="#FFFFFF"
-        stroke-width="20"
-        stroke-linecap="round"
-    />
+    <circle cx="42" cy="20" r="4.5" fill="url(#accent-grad)"/>
+    <circle cx="22" cy="20" r="3.5" fill="#EEF2FF"/>
+  </g>
 </svg>

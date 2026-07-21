@@ -89,7 +89,9 @@ const NotFound = () => {
 
     return (
         <Container>
-            <img src='src/assets/404.svg' width={20} />
+            <img src='src/assets/logo.svg '
+            alt='Cachorro sobre uma página destruída.'
+            width={20} />
             <NotFoundTitle>Ops. Essa página não foi encontrada.</NotFoundTitle>
             <Subtitle>Tente buscar por outras opções.</Subtitle>
             <ReturnButton onClick={() => navigate('/')}>Tenta voltar para o início.</ReturnButton>

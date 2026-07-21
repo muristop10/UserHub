@@ -1,5 +1,7 @@
 export interface iUser {
     id: string,
-    nome: string,
-    email: string
+    name: string,
+    email: string,
+    profileImage?: string
+    bio?: string
 }
