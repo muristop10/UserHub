@@ -1,0 +1,144 @@
+{
+  "users": [
+    {
+      "id": "usr_001",
+      "name": "Ana Silva",
+      "email": "ana.silva@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/women/1.jpg",
+      "bio": "Desenvolvedora Frontend apaixonada por UI/UX."
+    },
+    {
+      "id": "usr_002",
+      "name": "Carlos Eduardo",
+      "email": "carlos.eduardo@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/men/2.jpg",
+      "bio": "Estudando Node.js e construindo meus primeiros CRUDs."
+    },
+    {
+      "id": "usr_003",
+      "name": "Beatriz Lima",
+      "email": "beatriz.lima@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/women/3.jpg",
+      "bio": "Entusiasta de tecnologia e café."
+    },
+    {
+      "id": "usr_004",
+      "name": "Lucas Martins",
+      "email": "lucas.martins@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/men/4.jpg",
+      "bio": "Engenheiro de software focado em backend."
+    },
+    {
+      "id": "usr_005",
+      "name": "Juliana Rocha",
+      "email": "juliana.rocha@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/women/5.jpg",
+      "bio": "Apaixonada por design systems."
+    },
+    {
+      "id": "usr_006",
+      "name": "Gabriel Souza",
+      "email": "gabriel.souza@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/men/6.jpg",
+      "bio": "Desenvolvendo APIs com NestJS."
+    },
+    {
+      "id": "usr_007",
+      "name": "Fernanda Costa",
+      "email": "fernanda.costa@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/women/7.jpg",
+      "bio": "Product Designer e pesquisadora UX."
+    },
+    {
+      "id": "usr_008",
+      "name": "Mateus Oliveira",
+      "email": "mateus.oliveira@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/men/8.jpg",
+      "bio": "Amante de React e TypeScript."
+    },
+    {
+      "id": "usr_009",
+      "name": "Larissa Almeida",
+      "email": "larissa.almeida@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/women/9.jpg",
+      "bio": "Criando experiências digitais acessíveis."
+    },
+    {
+      "id": "usr_010",
+      "name": "Ricardo Gomes",
+      "email": "ricardo.gomes@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/men/10.jpg",
+      "bio": "Especialista em arquitetura de software."
+    },
+    {
+      "id": "usr_011",
+      "name": "Camila Ferreira",
+      "email": "camila.ferreira@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/women/11.jpg",
+      "bio": "Explorando IA e automações."
+    },
+    {
+      "id": "usr_012",
+      "name": "João Pedro Santos",
+      "email": "joaopedro.santos@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/men/12.jpg",
+      "bio": "Full Stack Developer."
+    },
+    {
+      "id": "usr_013",
+      "name": "Patrícia Nunes",
+      "email": "patricia.nunes@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/women/13.jpg",
+      "bio": "Entusiasta de cloud computing."
+    },
+    {
+      "id": "usr_014",
+      "name": "Rafael Barbosa",
+      "email": "rafael.barbosa@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/men/14.jpg",
+      "bio": "Desenvolvedor mobile Flutter."
+    },
+    {
+      "id": "usr_015",
+      "name": "Mariana Melo",
+      "email": "mariana.melo@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/women/15.jpg",
+      "bio": "Apaixonada por produtos digitais."
+    },
+    {
+      "id": "usr_016",
+      "name": "André Carvalho",
+      "email": "andre.carvalho@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/men/16.jpg",
+      "bio": "Backend Engineer com foco em microsserviços."
+    },
+    {
+      "id": "usr_017",
+      "name": "Isabela Ribeiro",
+      "email": "isabela.ribeiro@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/women/17.jpg",
+      "bio": "Criadora de conteúdo tech."
+    },
+    {
+      "id": "usr_018",
+      "name": "Bruno Fernandes",
+      "email": "bruno.fernandes@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/men/18.jpg",
+      "bio": "Estudando DevOps e Kubernetes."
+    },
+    {
+      "id": "usr_019",
+      "name": "Aline Cardoso",
+      "email": "aline.cardoso@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/women/19.jpg",
+      "bio": "QA Engineer apaixonada por qualidade."
+    },
+    {
+      "id": "usr_020",
+      "name": "Thiago Pereira",
+      "email": "thiago.pereira@example.com",
+      "profileImage": "https://randomuser.me/api/portraits/men/20.jpg",
+      "bio": "Especialista em desenvolvimento web."
+    }
+  ]
+}

@@ -197,7 +197,8 @@ const Header = () => {
       </nav>
 
       <div className="search">
-        <InputUserSearch placeholder='Busque por usuários...' />
+        <InputUserSearch placeholder='Busque por usuários...' 
+        isAuthenticated={false}/>
       </div>
 
       <div className="actions">

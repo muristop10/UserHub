@@ -89,7 +89,7 @@ const NotFound = () => {
 
     return (
         <Container>
-            <img src='src/assets/logo.svg '
+            <img src='src/assets/404.svg '
             alt='Cachorro sobre uma página destruída.'
             width={20} />
             <NotFoundTitle>Ops. Essa página não foi encontrada.</NotFoundTitle>

@@ -8,7 +8,6 @@ const SignUp = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   function handleSubmit (e : React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
-    setIsAuthenticated(true);
   }
 
   return (
@@ -36,7 +35,7 @@ const SignUp = () => {
           <Input id='imgPerfil' type='file' accept='image/*'/>
 
           <SubmitButton onClick={handleSubmit}>Cadastrar-se</SubmitButton>
-          {(isAuthenticated && <ErrorSpan>Erro ao logar.</ErrorSpan>)}
+          {/* {(isAuthenticated && <ErrorSpan>Erro ao logar.</ErrorSpan>)} */}
         </Form>
       </Container>
 

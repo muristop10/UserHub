@@ -1,15 +1,15 @@
-import React, { useState, type ReactNode } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import { Bounce, toast, ToastContainer } from 'react-toastify'
 
 export const SearchInput = styled.input`
   width: 100%;
   height: 42px;
 
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: ${props => props.disabled ? '1px solid rgba(255, 0, 0, 0.643);' : '1px solid rgba(255, 255, 255, 0.1);'} ;
   border-radius: 999px;
 
-  background: rgba(255, 255, 255, 0.08);
+  background: ${props => props.disabled ? 'rgba(255, 0, 0, 0.376);' : 'rgba(255, 255, 255, 0.08)'} ;
 
   padding: 0 1rem;
 
@@ -18,7 +18,7 @@ export const SearchInput = styled.input`
   outline: none;
 
   &::placeholder {
-    color: #94a3b8;
+    ${props => props.disabled ? 'rgba(255, 0, 0, 0.643);' : 'white'} ;
   }
 
   &:focus {
@@ -27,30 +27,55 @@ export const SearchInput = styled.input`
 `;
 
 interface InputProps {
-    placeholder?: string,
-    type?: string,
-    value?: string
+  placeholder?: string,
+  type?: string,
+  value?: string,
+  isAuthenticated: boolean
 }
 
 const InputUserSearch = (
-    {
-        placeholder,
-        type = 'text',
-    } : InputProps
+  {
+    placeholder,
+    type = 'text',
+    isAuthenticated
+  }: InputProps
 ) => {
 
   const [value, setValue] = useState('');
 
-  function handleChange (e :  React.ChangeEvent<HTMLInputElement>) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setValue(e.target.value)
   }
 
+  function handleClick() {
+    if (!isAuthenticated) {
+      return (
+        toast.error('Input inválido! Faça login para utilizar!', {
+          position: "bottom-left",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+        })
+      )
+    }
+  }
+
   return (
-    <SearchInput placeholder={placeholder}
-    type={type}
-    value={value}
-    onChange={handleChange}/>
+    <>
+      <SearchInput 
+        placeholder={placeholder}
+        type={type}
+        value={value}
+        onChange={handleChange}
+        readOnly={!isAuthenticated}
+        onClick={handleClick} />
+    </>
   )
 }
 
-export default InputUserSearch
+  export default InputUserSearch

@@ -12,7 +12,7 @@ export async function getUsers() {
             return await res.json()
         }
     } catch (e) {
-        console.log("Erro:", e)
+        throw new Error('Erro ao buscar usuários');
     }
 }
 
@@ -31,14 +31,13 @@ export async function getUserById(id: string) {
 export async function createUser(userData: iUser) {
     const res = await fetch(API_URL, {
         method: 'POST',
+        body: JSON.stringify({
+        ...userData,
+        id: uuidv4(),
+        }),
         headers: {
             'Content-type': 'application/json',
-            body: JSON.stringify({
-                ...userData,
-                id: uuidv4(),
-            })
         },
-        body: JSON.stringify(userData)
     })
     if (!res.ok) {
         throw new Error('Erro ao criar user.')

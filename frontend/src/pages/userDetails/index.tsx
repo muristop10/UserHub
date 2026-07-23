@@ -7,6 +7,16 @@ import { ErrorSpan } from '../../components/ErrorSpan'
 import Loader from '../../components/Loader'
 import defaultUser from '../../assets/defaultUser.jpg'
 
+const CenterSection = styled.section`
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem 0;
+`
+
 const StyledBackLink = styled(Link)`
   display: inline-flex;
   align-items: center;
@@ -28,8 +38,9 @@ const StyledBackLink = styled(Link)`
 
 const StyledContainer = styled.section`
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 64px;
   padding: 2.5rem;
 
   background: var(--surface);
@@ -142,15 +153,21 @@ const UserDetails = () => {
 
   return <>
     {msgError && <ErrorSpan>Usuário não encontrado.</ErrorSpan>}
-    <span><StyledBackLink to='/users'>Voltar aos usuários</StyledBackLink></span>
+    {loading && <Loader />}
+    <CenterSection>
+      <span><StyledBackLink to='/users'>Voltar aos usuários</StyledBackLink></span>
+    </CenterSection>
+
     <StyledContainer>
-      <section>
+      <figure>
         <UserImg src={user.profileImage || defaultUser} />
-      </section>
+      </figure>
 
       <section>
         <UserName>{user.name}</UserName>
         <UserEmail>{user.email}</UserEmail>
+        <UserBio>{user.bio}</UserBio>
+
       </section>
 
     </StyledContainer>
