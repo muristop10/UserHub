@@ -1,0 +1,6 @@
+- Tratamento de erro - formulario
+- Tratamento de erro - resposta da api retorna dados sensíveis
+- Sistema de tokens / refresh / access
+- Rota protegida para o users
+- Página de perfil pessoal com edição dos dados
+- menu togglelable para as notificações
