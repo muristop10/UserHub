@@ -9,8 +9,32 @@ import {
   CTASection,
   PrimaryButton,
 } from '../../components/homeComponents';
+import Button from "../../components/Button";
 
 const Home = () => {
+
+  async function postData() {
+    try {
+      const response = await fetch('http://localhost:3001/auth/signup/', {
+        method: 'POST',
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify({
+          name: 'Murilo',
+          email: 'murilo@email.com',
+          password: '123456'
+        })
+      })
+
+      console.log(await response.json())
+    } catch (e) {
+      throw new Error (`Erro: ${e}`);
+    }
+
+;
+  }
+
   return (
     <HomeContainer>
       <HeroSection>
@@ -74,6 +98,10 @@ const Home = () => {
         <PrimaryButton to="/signup">
           Criar Conta
         </PrimaryButton>
+
+        <Button onClick={postData}>
+          Testar Post
+        </Button>   
       </CTASection>
     </HomeContainer>
   );

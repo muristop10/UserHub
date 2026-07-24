@@ -1,23 +1,21 @@
-import { v4 as uuidv4 } from "uuid";
-import type { iUser } from "../types";
+import type { signupUser } from "../types/signupUser";
 
-const API_URL = 'http://localhost:3001/users';
+const API_URL = 'http://localhost:3001';
 
 export async function getUsers() {
-    try {
-        const res = await fetch(API_URL);
-        if (!res.ok) {
-            throw new Error("Erro no fetch.")
-        } else {
-            return await res.json()
-        }
-    } catch (e) {
-        throw new Error('Erro ao buscar usuários');
+    const res = await fetch(`${API_URL}/users`);
+    if (!res.ok) {
+        const errorData = await res.json()
+        throw new Error(
+            errorData.message
+        )
+    } else {
+        return await res.json()
     }
 }
 
 export async function getUserById(id: string) {
-    const res = await fetch(`${API_URL}/${id}`, {
+    const res = await fetch(`${API_URL}/users/${id}`, {
         method: 'GET'
     })
     if (!res.ok) {
@@ -28,37 +26,42 @@ export async function getUserById(id: string) {
 
 }
 
-export async function createUser(userData: iUser) {
-    const res = await fetch(API_URL, {
+export async function createUser(userData: signupUser) {
+    const res = await fetch(`${API_URL}/auth/signup`, {
         method: 'POST',
         body: JSON.stringify({
-        ...userData,
-        id: uuidv4(),
+            ...userData,
         }),
         headers: {
             'Content-type': 'application/json',
         },
     })
     if (!res.ok) {
-        throw new Error('Erro ao criar user.')
+        const errorData = await res.json()
+        throw new Error(
+            errorData.message
+        )
     } else {
         return await res.json();
     }
 }
 
 export async function deleteUser(id: string) {
-    const res = await fetch(`${API_URL}/${id}`, {
+    const res = await fetch(`${API_URL}/users/${id}`, {
         method: 'DELETE'
     })
     if (!res.ok) {
-        throw new Error('Erro ao deletar user.')
+        const errorData = await res.json()
+        throw new Error(
+            errorData.message
+        )
     } else {
         return await res.json()
     }
 }
 
-export async function editUser(id: string, userData: Partial<{ name: string; email: string; bio?: string; profileImage?: string }>) {
-    const res = await fetch(`${API_URL}/${id}`, {
+export async function editUser(id: string, userData: Partial<signupUser>) {
+    const res = await fetch(`${API_URL}/users/${id}`, {
         method: 'PATCH',
         headers: {
             "Content-type": 'application/json',
@@ -66,7 +69,10 @@ export async function editUser(id: string, userData: Partial<{ name: string; ema
         }
     })
     if (!res.ok) {
-        throw new Error('Erro ao editar user.')
+        const errorData = await res.json()
+        throw new Error(
+            errorData.message
+        )
     } else {
         await res.json()
     }

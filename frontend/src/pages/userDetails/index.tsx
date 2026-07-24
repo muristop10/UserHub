@@ -1,21 +1,30 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import styled from 'styled-components'
-import type { iUser } from '../../types'
+import type { iUser } from '../../types/iUser'
 import { getUserById } from '../../services/userService'
 import { ErrorSpan } from '../../components/ErrorSpan'
 import Loader from '../../components/Loader'
-import defaultUser from '../../assets/defaultUser.jpg'
+import { toastError } from '../../utils/toast'
 
 const CenterSection = styled.section`
   width: 100%;
-
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: 2rem 0;
+`;
 
-  padding: 2rem 0;
-`
+const ErrorContainer = styled.section`
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 1rem;
+
+  margin-top: 2rem;
+`;
 
 const StyledBackLink = styled(Link)`
   display: inline-flex;
@@ -125,13 +134,14 @@ const UserDetails = () => {
         setUser(data);
       } catch (e) {
         console.log('Erro: ', e)
+        setError(true)
       } finally {
         setLoading(false);
       }
     }
 
     fetchUser()
-  }, [id, navigate])
+  }, [id])
 
   let msgError = null
   if (!id) {
@@ -144,15 +154,14 @@ const UserDetails = () => {
 
   if (error || !user) {
     return (
-      <>
-        <StyledBackLink to="/users">← Voltar aos usuários</StyledBackLink>
-        <ErrorSpan>Usuário não encontrado.</ErrorSpan>
-      </>
+        <ErrorContainer>
+          <StyledBackLink to="/users">← Voltar aos usuários</StyledBackLink>
+          <ErrorSpan>Usuário não encontrado.</ErrorSpan>
+        </ErrorContainer>
     )
   }
 
   return <>
-    {msgError && <ErrorSpan>Usuário não encontrado.</ErrorSpan>}
     {loading && <Loader />}
     <CenterSection>
       <span><StyledBackLink to='/users'>Voltar aos usuários</StyledBackLink></span>
@@ -160,7 +169,7 @@ const UserDetails = () => {
 
     <StyledContainer>
       <figure>
-        <UserImg src={user.profileImage || defaultUser} />
+        <UserImg src={user.profileImage} />
       </figure>
 
       <section>

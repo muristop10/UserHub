@@ -4,7 +4,7 @@ import { Container } from "../../components/formComponents"
 import MainTitle from "../../components/MainTitle"
 import Loader from "../../components/Loader"
 import { getUsers } from "../../services/userService"
-import type { iUser } from "../../types"
+import type { iUser } from "../../types/iUser"
 import UserCard from "../../components/UserCard"
 import { ErrorSpan } from "../../components/ErrorSpan"
 import Button from "../../components/Button"
@@ -20,7 +20,12 @@ const Users = () => {
       setLoading(true);
       setError(null)
       const data = await getUsers();
-      setUsers(data ?? []);
+      // tratamento de erro: data SEMPRE deve ser um array
+      if (data.length > 0) {
+        setUsers(Array.isArray(data) ? data : []);
+      } else {
+        setError('Não há usuários!')
+      }
     } catch (e) {
       setError('Erro ao carregar usuários.')
     } finally {

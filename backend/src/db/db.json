@@ -44,6 +44,86 @@
       "passwordHash": "J8cV7",
       "dataNasc": "1996-09-07",
       "bio": "Apaixonada por design systems."
+    },
+    {
+      "id": "5661d7eb-7a95-434b-9e4e-c94042b1e731",
+      "name": "morilo",
+      "email": "email@email.com",
+      "dataNasc": "2000-12-12",
+      "passwordHash": "$2b$10$G.0u8l1.mx.O4BLDwlBSAu0SzyW.Bzxy/9oSuuBshbi9Md8PyElBq",
+      "createdAt": "2026-07-24T13:56:51.201Z",
+      "profileImage": "../../../frontend/src/assets/defaultUser.jpg",
+      "bio": "Olá, sou um usuário do UserHub!"
+    },
+    {
+      "id": "0ba2ba49-7d2f-43e8-a826-e825d8da6145",
+      "name": "Murilo Thomé",
+      "email": "murilo.thome@desbravador.com.br",
+      "dataNasc": "2000-12-12",
+      "passwordHash": "$2b$10$gghqUNjkEYW1Yw4ILPhHh.HjBiToxuJt584.nSr0Dmelnk2rGSZra",
+      "createdAt": "2026-07-24T14:00:51.116Z",
+      "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKOaKWM8FAWEXxGcOP9oh-u3Wbmq76wCT9BpbwVzdYhRU8ks0dh1g2BrQ&s=10",
+      "bio": "Olá, sou um usuário do UserHub!"
+    },
+    {
+      "id": "91a3ecd0-c96d-47c1-b2f4-c5d895a7cea2",
+      "name": "muristop10's Org",
+      "email": "aa@a",
+      "dataNasc": "5121-12-12",
+      "passwordHash": "$2b$10$ki4ixE/485q3bEnw/3R07.gjnpp/OyEE9P1Rnj7Aosgsd4pqAMeA6",
+      "createdAt": "2026-07-24T14:02:26.672Z",
+      "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKOaKWM8FAWEXxGcOP9oh-u3Wbmq76wCT9BpbwVzdYhRU8ks0dh1g2BrQ&s=10",
+      "bio": "Olá, sou um usuário do UserHub!"
+    },
+    {
+      "id": "efba9f04-4bef-4e99-83c4-bed4dae4dc00",
+      "name": "Murilao",
+      "email": "murialo@gmail.com",
+      "dataNasc": "2000-12-12",
+      "passwordHash": "$2b$10$t7lhpPEcxI9pkEoydjRGdORLbCzBjHa/yacBu8w6w7pYN1jx7jeW6",
+      "createdAt": "2026-07-24T14:06:51.031Z",
+      "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKOaKWM8FAWEXxGcOP9oh-u3Wbmq76wCT9BpbwVzdYhRU8ks0dh1g2BrQ&s=10",
+      "bio": "Olá, sou um usuário do UserHub!"
+    },
+    {
+      "id": "16b60ba3-faaf-4e31-b16f-a4e9ef41d144",
+      "name": "",
+      "email": "",
+      "dataNasc": "2026-07-24T14:09:35.447Z",
+      "passwordHash": "$2b$10$VY5cnoajeLhXT.1ONA5FCObKCUjsUjr6CXIgtPJX9b2TeV2J1mbIu",
+      "createdAt": "2026-07-24T14:09:37.025Z",
+      "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKOaKWM8FAWEXxGcOP9oh-u3Wbmq76wCT9BpbwVzdYhRU8ks0dh1g2BrQ&s=10",
+      "bio": "Olá, sou um usuário do UserHub!"
+    },
+    {
+      "id": "84bffea3-ec31-4c97-86dc-b67289e4927c",
+      "name": "Murilo Thomé",
+      "email": "email@gmail.com",
+      "dataNasc": "1212-12-12",
+      "passwordHash": "$2b$10$KYXNsAOFWAJiYGvMlflVyuRbs.sHc5eYaB0kASPzBUjx3OztNRtYm",
+      "createdAt": "2026-07-24T14:30:22.100Z",
+      "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKOaKWM8FAWEXxGcOP9oh-u3Wbmq76wCT9BpbwVzdYhRU8ks0dh1g2BrQ&s=10",
+      "bio": "Olá, sou um usuário do UserHub!"
+    },
+    {
+      "id": "e3afa815-2c3c-410d-9627-ba7988e530c6",
+      "name": "dsfdfs",
+      "email": "dsadasdas@gmail.com",
+      "dataNasc": "1232-12-12",
+      "passwordHash": "$2b$10$mPY/EhwPCuRzwSfnNIuqju67xRVztfX/CcHUvNV5ztpvBxHNcDF4i",
+      "createdAt": "2026-07-24T14:30:57.475Z",
+      "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKOaKWM8FAWEXxGcOP9oh-u3Wbmq76wCT9BpbwVzdYhRU8ks0dh1g2BrQ&s=10",
+      "bio": "Olá, sou um usuário do UserHub!"
+    },
+    {
+      "id": "0d9993b8-ffd2-42f4-9253-e941f03e19c8",
+      "name": "132",
+      "email": "32132",
+      "dataNasc": "3213-12-21",
+      "passwordHash": "$2b$10$TOdAR2ulCiTBS0AT3F2jWOvzf.MjM7rn4U9hAmkitu8Tw0pl0RD4i",
+      "createdAt": "2026-07-24T14:42:42.962Z",
+      "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKOaKWM8FAWEXxGcOP9oh-u3Wbmq76wCT9BpbwVzdYhRU8ks0dh1g2BrQ&s=10",
+      "bio": "Olá, sou um usuário do UserHub!"
     }
   ]
 }

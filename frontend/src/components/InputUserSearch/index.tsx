@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Bounce, toast, ToastContainer } from 'react-toastify'
+import { toastError } from '../../utils/toast';
 
 export const SearchInput = styled.input`
   width: 100%;
@@ -50,17 +51,7 @@ const InputUserSearch = (
   function handleClick() {
     if (!isAuthenticated) {
       return (
-        toast.error('Input inválido! Faça login para utilizar!', {
-          position: "bottom-left",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-          transition: Bounce,
-        })
+        toastError('Faça login para acessar!')
       )
     }
   }

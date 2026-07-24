@@ -1,8 +1,6 @@
 import styled from 'styled-components'
-import type { iUser } from '../../types'
+import type { iUser } from '../../types/iUser'
 import { Link } from 'react-router-dom'
-import defaultUser from '../../assets/defaultUser.jpg'
-
 
 const StyledDiv = styled.div`
   display: flex;
@@ -72,7 +70,7 @@ const UserCard = ({ user }: UserCardProps) => {
     <Link to={urlUserDetails} >
       <StyledDiv>
         <StyledName>{user.name}</StyledName>
-        <StyledImg src={user.profileImage || defaultUser} />
+        <StyledImg src={user.profileImage} />
         <StyledBio>{user.bio}</StyledBio>
       </StyledDiv>
     </Link >
