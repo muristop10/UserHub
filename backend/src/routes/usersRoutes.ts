@@ -1,26 +1,11 @@
 import { Router } from "express";
-import { URLSearchParams } from "node:url";
+import { getUserById, getUsers } from "../controllers/usersController";
 
 const usersRoutes = Router();
 
-usersRoutes.get('/', (req, res) => {
-    res.json({
-        mensagem: 'boa tarde'
-    })
-})
- 
-usersRoutes.get('/:id', (req, res) => {
-    res.json({
-        mensagem: `boa tarde com id`
-    })
-})
- 
-usersRoutes.patch('/:id', (req, res) => {
-
-})
- 
-usersRoutes.delete('/:id', (req, res) => {
-
-})
+usersRoutes.get('/', getUsers); 
+usersRoutes.get('/:id', getUserById); 
+// usersRoutes.patch('/:id', editUser); 
+// usersRoutes.delete('/:id', deleteUser);
 
 export default usersRoutes

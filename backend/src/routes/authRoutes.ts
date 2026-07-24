@@ -1,13 +1,10 @@
 import { Router } from "express";
-import { ping } from "../controllers/authController";
+import { ping, signup } from "../controllers/authController";
 
 const authRouter = Router();
 
-authRouter.get('/ping', ping)
-
-// authRouter.post('/signup', (req, res) => {
-
-// })
+authRouter.get('/ping', ping);
+authRouter.post('/signup', signup);
  
 // authRouter.post('/login', (req, res) => {
 
